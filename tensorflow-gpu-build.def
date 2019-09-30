@@ -25,8 +25,7 @@ Include: software-properties-common
     export PATH="/usr/local/cuda/bin:$PATH"
     export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
     export CUDA_HOME="/usr/local/cuda"
-    
- 
+     
 %post -c /bin/bash
 
     # Nvidia CUDA Path
@@ -34,7 +33,6 @@ Include: software-properties-common
     export PATH="/usr/local/cuda/bin:$PATH"
     export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/:/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
     export CUDA_HOME="/usr/local/cuda"
-
 
     # Declare variables for downloaded applications
     declare -r CUDA_FILE=cuda_10.0.130_410.48_linux
@@ -85,8 +83,3 @@ else
  echo "Tests Failed " 
  exit 1
 fi
-
-
-
-
-
