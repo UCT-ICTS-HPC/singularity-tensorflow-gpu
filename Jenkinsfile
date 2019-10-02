@@ -10,7 +10,7 @@ node('gpu') {
     stage ('Checkout code') {checkout scm}
          
     stage('Build') {
-       if (fileExists "${$CONTAINER_DIR}" {
+       if (fileExists (CONTAINER_DIR)) {
              echo 'Directory exists'
              } else {
              sh "mkdir $CONTAINER_DIR" 
