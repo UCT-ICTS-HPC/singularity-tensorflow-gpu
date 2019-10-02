@@ -10,7 +10,7 @@ node('gpu') {
     stage ('Checkout code') {checkout scm}
          
     stage('Build') {
-       if (fileExists('$CONTAINER_DIR')) {
+       if fileExists '$CONTAINER_DIR' {
              echo 'Directory exists'
              } else {
              sh "mkdir $CONTAINER_DIR" 
@@ -32,7 +32,7 @@ node('gpu') {
     stage('Deliver HPC software to repository') {
       // Make application available to HPC users 
       sh "cp $CONTAINER_DIR/$TF_VER-$CONTAINER_NAME-$BUILD_NUMBER $SW_LOCATION"
-      dir('$SW_LOCATION') {
+      dir('${SW_LOCATION') {
          sh "ln -sf $SW_LOCATION/$TF_VER-$CONTAINER_NAME-$BUILD_NUMBER tensorflow-$TF_VER-gpu.sif"
       }
       echo "Generating software environment module file"
