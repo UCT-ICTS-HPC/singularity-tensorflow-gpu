@@ -14,7 +14,7 @@ Include: software-properties-common
     SYSTEM_URL http://hpc.uct.ac.za
 
     AUTHOR_NAME Timothy Carr
-    AUTHOR_EMAIL timothy.carr@uct.ac.za
+    AUTHOR_EMAIL eresearch@uct.ac.za
 
 %environment
     # Set system locale
