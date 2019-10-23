@@ -76,6 +76,7 @@ This is a TensorFlow 1.14 container. It includes the NVIDIA CUDA toolkit but not
 set -e 
 nvidia-smi -L
 python3 -W ignore -c 'import tensorflow as tf'
+python3 -W ignore -c 'import hyperopt'
 if [ $? -eq 0 ]
 then
  echo "Tests Passed" 
