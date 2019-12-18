@@ -1,4 +1,4 @@
-// Defining Pipeline 
+// Environment Variables
 env.SW_LOCATION = '/opt/exp_soft/singularity-containers/tensorflow'
 env.CONTAINER_NAME = 'tensorflow-gpu.sif'
 env.CONTAINER_DEF = 'tensorflow-gpu-build.def'
@@ -6,6 +6,7 @@ env.CONTAINER_DIR = 'container'
 env.TF_VER = 'v1.x'
 env.SINGULARITY_BIN = '/usr/bin/singularity'
 
+// Define the Software Pipeline
 node('gpu') {
 
     stage ('Checkout code') {checkout scm}
